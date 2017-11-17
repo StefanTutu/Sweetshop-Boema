@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetComenzi" targetNamespace="http://tempuri.org/DataSetComenzi.xsd" xmlns:mstns="http://tempuri.org/DataSetComenzi.xsd" xmlns="http://tempuri.org/DataSetComenzi.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="CofetarieConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CofetarieConnectionString (Settings)" PropertyReference="ApplicationSettings.Practica.Properties.Settings.GlobalReference.Default.CofetarieConnectionString" Provider="System.Data.Odbc" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CofetarieConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * FROM comenzi</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="nrcomanda" DataSetColumn="nrcomanda" />
+              <Mapping SourceColumn="datacomanda" DataSetColumn="datacomanda" />
+              <Mapping SourceColumn="statuscomanda" DataSetColumn="statuscomanda" />
+              <Mapping SourceColumn="idlivrare" DataSetColumn="idlivrare" />
+              <Mapping SourceColumn="idbonfiscal" DataSetColumn="idbonfiscal" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetComenzi" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetComenzi" msprop:Generator_UserDSName="DataSetComenzi">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nrcomanda" msprop:Generator_ColumnVarNameInTable="columnnrcomanda" msprop:Generator_ColumnPropNameInRow="nrcomanda" msprop:Generator_ColumnPropNameInTable="nrcomandaColumn" msprop:Generator_UserColumnName="nrcomanda" type="xs:decimal" />
+              <xs:element name="datacomanda" msprop:Generator_ColumnVarNameInTable="columndatacomanda" msprop:Generator_ColumnPropNameInRow="datacomanda" msprop:Generator_ColumnPropNameInTable="datacomandaColumn" msprop:Generator_UserColumnName="datacomanda" type="xs:dateTime" />
+              <xs:element name="statuscomanda" msprop:Generator_ColumnVarNameInTable="columnstatuscomanda" msprop:Generator_ColumnPropNameInRow="statuscomanda" msprop:Generator_ColumnPropNameInTable="statuscomandaColumn" msprop:Generator_UserColumnName="statuscomanda">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idlivrare" msprop:Generator_ColumnVarNameInTable="columnidlivrare" msprop:Generator_ColumnPropNameInRow="idlivrare" msprop:Generator_ColumnPropNameInTable="idlivrareColumn" msprop:Generator_UserColumnName="idlivrare" type="xs:decimal" />
+              <xs:element name="idbonfiscal" msprop:Generator_ColumnVarNameInTable="columnidbonfiscal" msprop:Generator_ColumnPropNameInRow="idbonfiscal" msprop:Generator_ColumnPropNameInTable="idbonfiscalColumn" msprop:Generator_UserColumnName="idbonfiscal" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:nrcomanda" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

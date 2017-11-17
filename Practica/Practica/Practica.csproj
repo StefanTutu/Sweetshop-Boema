@@ -1,0 +1,839 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{715C83A0-EB11-4B27-91B5-87D38377F110}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Practica</RootNamespace>
+    <AssemblyName>Practica</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Npgsql">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\PostgreSQL\Npgsql\ms.net45\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.Activities.Presentation" />
+    <Reference Include="System.AddIn" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Controls.Ribbon" />
+    <Reference Include="System.Windows.Forms.Ribbon35, Version=3.5.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\System.Windows.Forms.Ribbon35.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Angajati.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Angajati.Designer.cs">
+      <DependentUpon>Angajati.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AxShockwaveFlashObjects.cs" />
+    <Compile Include="Bonuri-Fiscale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bonuri-Fiscale.Designer.cs">
+      <DependentUpon>Bonuri-Fiscale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clienti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clienti.Designer.cs">
+      <DependentUpon>Clienti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientiIncasari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientiIncasari.Designer.cs">
+      <DependentUpon>ClientiIncasari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comenzi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comenzi.Designer.cs">
+      <DependentUpon>Comenzi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComenziProductie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComenziProductie.Designer.cs">
+      <DependentUpon>ComenziProductie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetAngajati.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetAngajati.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetBonuriFiscale.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetBonuriFiscale.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetClienti.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetClienti.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetComenzi.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetComenzi.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetComenziProductie.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetComenziProductie.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetCostProductie.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetCostProductie.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetDicountComenzi.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetDicountComenzi.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetIncasariClienti.cs">
+      <DependentUpon>DataSetIncasariClienti.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSetIncasariClienti.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetIncasariClienti.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetLivrari.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetLivrari.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetLocalitatiLivrari.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetLocalitatiLivrari.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetMateriiPrime.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetMateriiPrime.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetProduse.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetProduse.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetSoferi.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetSoferi.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetTransporturi.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetTransporturi.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Despre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Despre.Designer.cs">
+      <DependentUpon>Despre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Discount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Discount.Designer.cs">
+      <DependentUpon>Discount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FlashAnimation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FlashAnimation.Designer.cs">
+      <DependentUpon>FlashAnimation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Incasari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Incasari.Designer.cs">
+      <DependentUpon>Incasari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Livrari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Livrari.Designer.cs">
+      <DependentUpon>Livrari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LivrariComenzi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LivrariComenzi.Designer.cs">
+      <DependentUpon>LivrariComenzi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LivrariTransporturi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LivrariTransporturi.Designer.cs">
+      <DependentUpon>LivrariTransporturi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logare.Designer.cs">
+      <DependentUpon>Logare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MateriiPrime-Produse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MateriiPrime-Produse.Designer.cs">
+      <DependentUpon>MateriiPrime-Produse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MateriiPrime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MateriiPrime.Designer.cs">
+      <DependentUpon>MateriiPrime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Produse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Produse.Designer.cs">
+      <DependentUpon>Produse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProduseComenzi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProduseComenzi.Designer.cs">
+      <DependentUpon>ProduseComenzi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RaportAngajati.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaportAngajati.Designer.cs">
+      <DependentUpon>RaportAngajati.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RaportBonuriFiscale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaportBonuriFiscale.Designer.cs">
+      <DependentUpon>RaportBonuriFiscale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RaportClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaportClient.Designer.cs">
+      <DependentUpon>RaportClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RaportComenzi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaportComenzi.Designer.cs">
+      <DependentUpon>RaportComenzi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RaportComenziProductie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaportComenziProductie.Designer.cs">
+      <DependentUpon>RaportComenziProductie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RaportCostProductie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaportCostProductie.Designer.cs">
+      <DependentUpon>RaportCostProductie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RaportDiscountComenzi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaportDiscountComenzi.Designer.cs">
+      <DependentUpon>RaportDiscountComenzi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RaportIncasariClienti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaportIncasariClienti.Designer.cs">
+      <DependentUpon>RaportIncasariClienti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RaportLivrari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaportLivrari.Designer.cs">
+      <DependentUpon>RaportLivrari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RaportLocalitatiLivrare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaportLocalitatiLivrare.Designer.cs">
+      <DependentUpon>RaportLocalitatiLivrare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RaportMateriiPrime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaportMateriiPrime.Designer.cs">
+      <DependentUpon>RaportMateriiPrime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RaportProduse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaportProduse.Designer.cs">
+      <DependentUpon>RaportProduse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RaportSoferi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaportSoferi.Designer.cs">
+      <DependentUpon>RaportSoferi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RaportTransporturi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaportTransporturi.Designer.cs">
+      <DependentUpon>RaportTransporturi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Retururi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Retururi.Designer.cs">
+      <DependentUpon>Retururi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoutedEventArgs.cs" />
+    <Compile Include="Soferi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Soferi.Designer.cs">
+      <DependentUpon>Soferi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sure.Designer.cs">
+      <DependentUpon>Sure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transporturi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transporturi.Designer.cs">
+      <DependentUpon>Transporturi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VanzariProprii-Incasari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VanzariProprii-Incasari.Designer.cs">
+      <DependentUpon>VanzariProprii-Incasari.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Angajati.resx">
+      <DependentUpon>Angajati.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bonuri-Fiscale.resx">
+      <DependentUpon>Bonuri-Fiscale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clienti.resx">
+      <DependentUpon>Clienti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientiIncasari.resx">
+      <DependentUpon>ClientiIncasari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comenzi.resx">
+      <DependentUpon>Comenzi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComenziProductie.resx">
+      <DependentUpon>ComenziProductie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Despre.resx">
+      <DependentUpon>Despre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Discount.resx">
+      <DependentUpon>Discount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FlashAnimation.resx">
+      <DependentUpon>FlashAnimation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Incasari.resx">
+      <DependentUpon>Incasari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Livrari.resx">
+      <DependentUpon>Livrari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LivrariComenzi.resx">
+      <DependentUpon>LivrariComenzi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LivrariTransporturi.resx">
+      <DependentUpon>LivrariTransporturi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logare.resx">
+      <DependentUpon>Logare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MateriiPrime-Produse.resx">
+      <DependentUpon>MateriiPrime-Produse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MateriiPrime.resx">
+      <DependentUpon>MateriiPrime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produse.resx">
+      <DependentUpon>Produse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProduseComenzi.resx">
+      <DependentUpon>ProduseComenzi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RaportAngajati.resx">
+      <DependentUpon>RaportAngajati.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RaportBonuriFiscale.resx">
+      <DependentUpon>RaportBonuriFiscale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RaportClient.resx">
+      <DependentUpon>RaportClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RaportComenzi.resx">
+      <DependentUpon>RaportComenzi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RaportComenziProductie.resx">
+      <DependentUpon>RaportComenziProductie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RaportCostProductie.resx">
+      <DependentUpon>RaportCostProductie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RaportDiscountComenzi.resx">
+      <DependentUpon>RaportDiscountComenzi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RaportIncasariClienti.resx">
+      <DependentUpon>RaportIncasariClienti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RaportLivrari.resx">
+      <DependentUpon>RaportLivrari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RaportLocalitatiLivrare.resx">
+      <DependentUpon>RaportLocalitatiLivrare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RaportMateriiPrime.resx">
+      <DependentUpon>RaportMateriiPrime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RaportProduse.resx">
+      <DependentUpon>RaportProduse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RaportSoferi.resx">
+      <DependentUpon>RaportSoferi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RaportTransporturi.resx">
+      <DependentUpon>RaportTransporturi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="ReportAngajati.rdlc" />
+    <EmbeddedResource Include="ReportBonuriFiscale.rdlc" />
+    <EmbeddedResource Include="ReportClienti.rdlc" />
+    <EmbeddedResource Include="ReportComenzi.rdlc" />
+    <EmbeddedResource Include="ReportComenziProductie.rdlc" />
+    <EmbeddedResource Include="ReportCostProductie.rdlc" />
+    <EmbeddedResource Include="ReportDiscountComenzi.rdlc" />
+    <EmbeddedResource Include="ReportIncasariClienti.rdlc" />
+    <EmbeddedResource Include="ReportLivrari.rdlc" />
+    <EmbeddedResource Include="ReportLocalitatiLivrare.rdlc" />
+    <EmbeddedResource Include="ReportMateriiPrime.rdlc" />
+    <EmbeddedResource Include="ReportProduse.rdlc" />
+    <EmbeddedResource Include="ReportSoferi.rdlc" />
+    <EmbeddedResource Include="ReportTransporturi.rdlc" />
+    <EmbeddedResource Include="Retururi.resx">
+      <DependentUpon>Retururi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Soferi.resx">
+      <DependentUpon>Soferi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sure.resx">
+      <DependentUpon>Sure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transporturi.resx">
+      <DependentUpon>Transporturi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VanzariProprii-Incasari.resx">
+      <DependentUpon>VanzariProprii-Incasari.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetAngajati.xsc">
+      <DependentUpon>DataSetAngajati.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetAngajati.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetAngajati.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetAngajati.xss">
+      <DependentUpon>DataSetAngajati.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetBonuriFiscale.xsc">
+      <DependentUpon>DataSetBonuriFiscale.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetBonuriFiscale.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetBonuriFiscale.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetBonuriFiscale.xss">
+      <DependentUpon>DataSetBonuriFiscale.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetClienti.xsc">
+      <DependentUpon>DataSetClienti.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetClienti.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetClienti.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetClienti.xss">
+      <DependentUpon>DataSetClienti.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetComenzi.xsc">
+      <DependentUpon>DataSetComenzi.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetComenzi.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetComenzi.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetComenzi.xss">
+      <DependentUpon>DataSetComenzi.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetComenziProductie.xsc">
+      <DependentUpon>DataSetComenziProductie.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetComenziProductie.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetComenziProductie.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetComenziProductie.xss">
+      <DependentUpon>DataSetComenziProductie.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetCostProductie.xsc">
+      <DependentUpon>DataSetCostProductie.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetCostProductie.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetCostProductie.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetCostProductie.xss">
+      <DependentUpon>DataSetCostProductie.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetDicountComenzi.xsc">
+      <DependentUpon>DataSetDicountComenzi.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetDicountComenzi.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetDicountComenzi.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetDicountComenzi.xss">
+      <DependentUpon>DataSetDicountComenzi.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetIncasariClienti.xsc">
+      <DependentUpon>DataSetIncasariClienti.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetIncasariClienti.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetIncasariClienti.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetIncasariClienti.xss">
+      <DependentUpon>DataSetIncasariClienti.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetLivrari.xsc">
+      <DependentUpon>DataSetLivrari.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetLivrari.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetLivrari.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetLivrari.xss">
+      <DependentUpon>DataSetLivrari.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetLocalitatiLivrari.xsc">
+      <DependentUpon>DataSetLocalitatiLivrari.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetLocalitatiLivrari.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetLocalitatiLivrari.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetLocalitatiLivrari.xss">
+      <DependentUpon>DataSetLocalitatiLivrari.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetMateriiPrime.xsc">
+      <DependentUpon>DataSetMateriiPrime.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetMateriiPrime.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetMateriiPrime.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetMateriiPrime.xss">
+      <DependentUpon>DataSetMateriiPrime.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetProduse.xsc">
+      <DependentUpon>DataSetProduse.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetProduse.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetProduse.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetProduse.xss">
+      <DependentUpon>DataSetProduse.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetSoferi.xsc">
+      <DependentUpon>DataSetSoferi.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetSoferi.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetSoferi.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetSoferi.xss">
+      <DependentUpon>DataSetSoferi.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetTransporturi.xsc">
+      <DependentUpon>DataSetTransporturi.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetTransporturi.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetTransporturi.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetTransporturi.xss">
+      <DependentUpon>DataSetTransporturi.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxShockwaveFlashObjects">
+      <Guid>{D27CDB6B-AE6D-11CF-96B8-444553540000}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="ShockwaveFlashObjects">
+      <Guid>{D27CDB6B-AE6D-11CF-96B8-444553540000}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Full Recycle Bin 64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Document-2-Edit-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disk-save-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red-31176_640.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\semnul + 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stock-illustration-36022180-vector-running-human-icon - Copy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stock-illustration-36022180-vector-running-human-icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\start1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\finish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img236.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img2362.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close-2-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\produse.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11693116_613971292073264_1045089501_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Retururi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Transporturi1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\livrari.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\materii prime.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comenzi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clienti.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comenzi productie.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\soferi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bon fiscal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Incasari.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formulare_complexe.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\discount-stamp-vector-clip-art-33305813.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\angajati.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background_final.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background_final1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background_fin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background_finalllll.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

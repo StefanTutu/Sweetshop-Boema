@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetClienti" targetNamespace="http://tempuri.org/DataSetClienti.xsd" xmlns:mstns="http://tempuri.org/DataSetClienti.xsd" xmlns="http://tempuri.org/DataSetClienti.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="CofetarieConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CofetarieConnectionString (Settings)" PropertyReference="ApplicationSettings.Practica.Properties.Settings.GlobalReference.Default.CofetarieConnectionString" Provider="System.Data.Odbc" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CofetarieConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>Select * from clienti</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="codcl" DataSetColumn="codcl" />
+              <Mapping SourceColumn="numecl" DataSetColumn="numecl" />
+              <Mapping SourceColumn="adresacl" DataSetColumn="adresacl" />
+              <Mapping SourceColumn="loccl" DataSetColumn="loccl" />
+              <Mapping SourceColumn="judcl" DataSetColumn="judcl" />
+              <Mapping SourceColumn="soldcurent" DataSetColumn="soldcurent" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetClienti" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetClienti" msprop:Generator_UserDSName="DataSetClienti">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="codcl" msprop:Generator_ColumnVarNameInTable="columncodcl" msprop:Generator_ColumnPropNameInRow="codcl" msprop:Generator_ColumnPropNameInTable="codclColumn" msprop:Generator_UserColumnName="codcl" type="xs:decimal" />
+              <xs:element name="numecl" msprop:Generator_ColumnVarNameInTable="columnnumecl" msprop:Generator_ColumnPropNameInRow="numecl" msprop:Generator_ColumnPropNameInTable="numeclColumn" msprop:Generator_UserColumnName="numecl">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="adresacl" msprop:Generator_ColumnVarNameInTable="columnadresacl" msprop:Generator_ColumnPropNameInRow="adresacl" msprop:Generator_ColumnPropNameInTable="adresaclColumn" msprop:Generator_UserColumnName="adresacl">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="loccl" msprop:Generator_ColumnVarNameInTable="columnloccl" msprop:Generator_ColumnPropNameInRow="loccl" msprop:Generator_ColumnPropNameInTable="locclColumn" msprop:Generator_UserColumnName="loccl">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="judcl" msprop:Generator_ColumnVarNameInTable="columnjudcl" msprop:Generator_ColumnPropNameInRow="judcl" msprop:Generator_ColumnPropNameInTable="judclColumn" msprop:Generator_UserColumnName="judcl">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="soldcurent" msprop:Generator_ColumnVarNameInTable="columnsoldcurent" msprop:Generator_ColumnPropNameInRow="soldcurent" msprop:Generator_ColumnPropNameInTable="soldcurentColumn" msprop:Generator_UserColumnName="soldcurent" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:codcl" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
